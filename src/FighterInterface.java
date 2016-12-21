@@ -1,5 +1,5 @@
 
 public interface FighterInterface {
-	void fight();
+	double attack();
 	void block();
 }

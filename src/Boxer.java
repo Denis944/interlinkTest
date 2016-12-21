@@ -1,13 +1,17 @@
 
 public class Boxer extends Fighter implements FighterInterface {
 	
-	public Boxer(String firstName, String lastName, int weight, int age){
+	protected double handDamage;
+	
+	public Boxer(String firstName, String lastName, int weight, int age, double handDamage){
 		super(firstName, lastName, weight, age);
+		this.handDamage = handDamage;
 	}
 	
 	@Override
-	public void fight() {
+	public double attack() {
 		doHandPunch();
+		return handDamage;
 	}
 
 	@Override
